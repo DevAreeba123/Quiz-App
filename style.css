@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.quiz-container, .result-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 40px 50px;
+}
+
+.quiz-container h1 {
+    font-size: 28px;
+    color: #ffd700;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#question {
+    font-size: 24px;
+    color: #001e4d;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #2575fc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background-color: #6a11cb;
+    transform: translateY(-2px);
+}
+
+#nextbtn, #restartbtn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#nextbtn {
+    background-color: #ffd700;
+    color: #001e4d;
+}
+
+#nextbtn:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+}
+
+#restartbtn {
+    background-color: #2575fc;
+    color: #ffffff;
+}
+
+#restartbtn:hover {
+    background-color: #6a11cb;
+    transform: translateY(-2px);
+}
+
+.result-container h2 {
+    font-size: 26px;
+    color: #001e4d;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .quiz-container, .result-container {
+        padding: 30px 25px;
+    }
+    #question {
+        font-size: 20px;
+    }
+    .option, #nextbtn, #restartbtn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
